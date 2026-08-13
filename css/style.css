@@ -1,0 +1,14 @@
+:root{--p:#0F62FE;--g:#16A34A;--a:#F59E0B;--bg:#F8FAFC}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,sans-serif;background:var(--bg);color:#111}
+h1,h2,h3{font-family:Poppins,sans-serif}section{padding:70px 8%}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:15px 8%;position:sticky;top:0;background:#fff;box-shadow:0 2px 8px #0001}
+nav a{text-decoration:none;margin:0 10px;color:#333}.badge{background:#e8f5e9;color:var(--g);padding:6px 12px;border-radius:20px;font-size:.85rem}
+.hero{text-align:center;background:linear-gradient(135deg,#eef5ff,#fff)}
+.btn{background:var(--p);color:#fff;border:none;padding:12px 22px;border-radius:8px;cursor:pointer;text-decoration:none}.alt{background:var(--g)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}.card{background:#fff;padding:24px;border-radius:12px;box-shadow:0 5px 18px #0001;text-align:center;transition:.3s}.card:hover{transform:translateY(-5px)}
+.soon{display:inline-block;background:#fff3cd;color:#946200;padding:4px 8px;border-radius:8px;font-size:.8rem}
+.partner{text-align:center;background:#eef7ff}
+footer{text-align:center;padding:30px;background:#111;color:#fff}
+.modal{display:none;position:fixed;inset:0;background:#0007;backdrop-filter:blur(5px);justify-content:center;align-items:center}
+.modal.show{display:flex}.box{background:#fff;padding:30px;border-radius:14px;max-width:350px;text-align:center;animation:pop .2s}
+@keyframes pop{from{transform:scale(.9);opacity:0}to{transform:scale(1);opacity:1}}
