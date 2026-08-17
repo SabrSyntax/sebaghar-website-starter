@@ -1,0 +1,26 @@
+/* ==========================================================================
+   SebaGhar — Shared Animation Utilities
+   Component-specific keyframes live alongside their component (see
+   hero.css, navigation.css, modal.css). This file holds only cross-cutting
+   utility classes reused by future sections.
+   ========================================================================== */
+
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity var(--duration-slow) var(--ease-out),
+    transform var(--duration-slow) var(--ease-out);
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-on-scroll {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
