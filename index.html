@@ -1,308 +1,177 @@
-<!DOCTYPE html>
-<html lang="en-IN">
+<!doctype html>
+<html lang="bn">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#087cf0">
+  <meta name="description" content="সেবাঘর | SebaGhar — ডিজিটাল পরিষেবা, নিত্যপ্রয়োজনীয় সামগ্রী, বই ও অন্যান্য প্রয়োজনীয় পণ্যের নির্ভরযোগ্য ঠিকানা।">
+  <title>সেবাঘর | SebaGhar — আপনার প্রয়োজনে, আপনার পাশে।</title>
 
-  <!-- ==================== SEO: Primary meta ==================== -->
-  <title>SebaGhar — Government & Digital Services at Your Fingertips</title>
-  <meta name="description" content="SebaGhar helps individuals access essential digital and government services quickly, securely, and affordably. A digital services platform by ANSARI INDIA." />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://sebaghar.ansariindia.com/" />
-  <meta name="theme-color" content="#0F62FE" />
-  <meta name="author" content="SabrSyntax" />
-
-  <!-- ==================== SEO: Open Graph ==================== -->
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="SebaGhar- A unit of Ansari India" />
-  <meta property="og:title" content="SebaGhar — Government & Digital Services at Your Fingertips" />
-  <meta property="og:description" content="SebaGhar helps individuals access essential digital and government services quickly, securely, and affordably." />
-  <meta property="og:url" content="https://sebaghar.ansariindia.com/" />
-  <meta property="og:locale" content="en_IN" />
-
-  <!-- ==================== SEO: Twitter / X ==================== -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="SebaGhar — Government & Digital Services at Your Fingertips" />
-  <meta name="twitter:description" content="SebaGhar helps individuals access essential digital and government services quickly, securely, and affordably." />
-
-  <!-- ==================== Fonts ====================
-       Preconnect for faster handshake; display=swap avoids invisible text
-       while the webfont loads. System-font fallbacks in tokens.css keep
-       layout stable if the request is slow or blocked. -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
-
-  <!-- ==================== Styles ====================
-       Linked individually (rather than @import) so the browser can fetch
-       them in parallel instead of a blocking chain. Cascade order is
-       intentional: tokens → base → animations → components. -->
-  <link rel="stylesheet" href="css/tokens.css" />
-  <link rel="stylesheet" href="css/base.css" />
-  <link rel="stylesheet" href="css/animations.css" />
-  <link rel="stylesheet" href="css/navigation.css" />
-  <link rel="stylesheet" href="css/hero.css" />
-  <link rel="stylesheet" href="css/modal.css" />
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <a href="#main" class="skip-link">Skip to main content</a>
+  <div class="top-glow" aria-hidden="true"></div>
+  <div class="announcement-bar" role="note" aria-label="পরিষেবা সংক্রান্ত আপডেট">
+    <div class="container announcement-inner">
+      <span class="announcement-icon" aria-hidden="true">📢</span>
+      <p>পরিষেবা সংক্রান্ত আপডেট পেতে আমাদের চ্যানেলটি <strong>Follow</strong> করুন এবং 🔔 বেল আইকনে ক্লিক করে <strong>Unmute</strong> করে রাখুন।</p>
+    </div>
+  </div>
 
-  <!-- ============================== NAVIGATION ============================== -->
-  <header class="navbar" id="navbar">
-    <div class="navbar__inner">
-      <a href="#top" class="brand" aria-label="SebaGhar home">
-        <span class="brand__mark" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M3 11.5 12 4l9 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M5.5 10v8.5A1.5 1.5 0 0 0 7 20h10a1.5 1.5 0 0 0 1.5-1.5V10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M10 20v-5.5h4V20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </span>
-        <span class="brand__text">
-          <span class="brand__name">SebaGhar</span>
-          <span class="brand__parent">A unit of Ansari India</span>
-        </span>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="সেবাঘর হোম">
+        <img class="brand-logo" src="assets/logo.png" alt="সেবাঘর SebaGhar লোগো" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid'">
+        <span class="logo-fallback" aria-hidden="true">স</span>
+        <span class="brand-text"><strong>সেবাঘর</strong><span>SebaGhar</span></span>
       </a>
-
-      <span class="trust-badge">
-        <span class="trust-badge__dot" aria-hidden="true"></span>
-        Trusted Digital Service Centre
-      </span>
-
-      <nav class="nav-links" aria-label="Primary">
-        <a class="nav-links__link" href="#top">Home</a>
-        <a class="nav-links__link" href="#services">Services</a>
-        <a class="nav-links__link" href="#why-us">Why Us</a>
-        <a class="nav-links__link" href="#popular-services">Popular Services</a>
-        <a class="nav-links__link" href="#partner">Partner</a>
-        <a class="nav-links__link" href="#contact">Contact</a>
+      <button class="menu-toggle" type="button" aria-label="মেনু খুলুন" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav" aria-label="প্রধান নেভিগেশন">
+        <a href="#services">আমাদের পরিষেবা</a>
+        <a href="#about">আমাদের সম্পর্কে</a>
+        <a href="#contact">যোগাযোগ</a>
+        <a class="nav-cta" href="tel:9091267274">☎  যোগাযোগ করুন</a>
       </nav>
-
-      <div class="navbar__actions">
-        <a href="#services" class="btn btn-primary navbar__cta">Explore Services</a>
-        <button
-          type="button"
-          class="nav-toggle"
-          id="navToggle"
-          aria-expanded="false"
-          aria-controls="mobileNav"
-          aria-label="Open menu"
-        >
-          <span class="nav-toggle__bars" aria-hidden="true">
-            <span></span><span></span><span></span>
-          </span>
-        </button>
-      </div>
     </div>
   </header>
 
-  <!-- ============================== MOBILE NAV ============================== -->
-  <div class="mobile-nav" id="mobileNav">
-    <div class="mobile-nav__backdrop" data-mobile-nav-close></div>
-    <div
-      class="mobile-nav__panel"
-      role="dialog"
-      aria-modal="true"
-      aria-label="Mobile navigation"
-      id="mobileNavPanel"
-    >
-      <div class="mobile-nav__header">
-        <span class="brand" aria-hidden="true">
-          <span class="brand__mark">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M3 11.5 12 4l9 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M5.5 10v8.5A1.5 1.5 0 0 0 7 20h10a1.5 1.5 0 0 0 1.5-1.5V10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M10 20v-5.5h4V20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </span>
-          <span class="brand__text">
-            <span class="brand__name">SebaGhar</span>
-            <span class="brand__parent">A unit of Ansari India</span>
-          </span>
-        </span>
-        <button type="button" class="mobile-nav__close" id="mobileNavClose" aria-label="Close menu">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-        </button>
-      </div>
-
-      <span class="trust-badge mobile-nav__badge">
-        <span class="trust-badge__dot" aria-hidden="true"></span>
-        Trusted Digital Service Centre
-      </span>
-
-      <nav class="mobile-nav__links" aria-label="Mobile primary">
-        <a class="mobile-nav__link" href="#top" data-mobile-nav-link>Home</a>
-        <a class="mobile-nav__link" href="#services" data-mobile-nav-link>Services</a>
-        <a class="mobile-nav__link" href="#why-us" data-mobile-nav-link>Why Us</a>
-        <a class="mobile-nav__link" href="#popular-services" data-mobile-nav-link>Popular Services</a>
-        <a class="mobile-nav__link" href="#partner" data-mobile-nav-link>Partner</a>
-        <a class="mobile-nav__link" href="#contact" data-mobile-nav-link>Contact</a>
-      </nav>
-
-      <div class="mobile-nav__footer">
-        <a href="#services" class="btn btn-primary btn-block" data-mobile-nav-link>Explore Services</a>
-      </div>
+  <section class="channel-update" aria-label="চ্যানেল আপডেট">
+    <div class="container channel-update-inner">
+      <span class="channel-megaphone" aria-hidden="true">📢</span>
+      <p>পরিষেবা সংক্রান্ত আপডেট পেতে আমাদের চ্যানেলটি
+        <a href="https://whatsapp.com/channel/0029VaACxFD3QxS35gQzZZ2E" target="_blank" rel="noopener noreferrer">Follow করুন</a>
+        এবং 🔔 বেল আইকনে ক্লিক করে <strong>Unmute</strong> করে রাখুন।
+      </p>
     </div>
-  </div>
+  </section>
 
-  <main id="main">
-    <!-- ============================== HERO ============================== -->
-    <section class="hero" id="top">
-      <div class="hero__bg" aria-hidden="true">
-        <div class="hero__bg-gradient"></div>
-        <div class="hero__bg-grid"></div>
-        <div class="hero__blob hero__blob--1 parallax-layer" data-depth="0.06"></div>
-        <div class="hero__blob hero__blob--2 parallax-layer" data-depth="0.04"></div>
-        <div class="hero__blob hero__blob--3 parallax-layer" data-depth="0.08"></div>
-      </div>
-
-      <div class="container hero__inner">
-        <div class="hero__content">
-          <p class="eyebrow hero__eyebrow">Empowering Every Citizen Through Digital Services</p>
-
-          <h1 class="hero__headline">
-            <span class="hero__headline-line"><span>Government &amp; Digital Services</span></span>
-            <span class="hero__headline-line"><span class="accent-text">at Your Fingertips.</span></span>
-          </h1>
-
-          <p class="hero__description">
-            SebaGhar helps individuals access essential digital and government services quickly, securely, and affordably.
-          </p>
-
-          <div class="hero__actions">
-            <a href="#services" class="btn btn-primary">
-              Explore Services
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M3.5 8h9M8.5 3.5 13 8l-4.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </a>
-            <button type="button" class="btn btn-secondary" data-coming-soon-trigger>
-              Become a Partner
-            </button>
-          </div>
-
-          <div class="hero__meta">
-            <span class="hero__meta-item">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
-                <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              Secure by design
-            </span>
-            <span class="hero__meta-item">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
-              </svg>
-              Fast digital access
-            </span>
-          </div>
+  <main>
+    <section class="hero container" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="status-dot"></span> আপনার এলাকার নির্ভরযোগ্য পরিষেবা কেন্দ্র</div>
+        <h1>আপনার প্রয়োজনে,<br><span>আপনার পাশে।</span></h1>
+        <p class="hero-lead">মানুষের দৈনন্দিন প্রয়োজন মেটাতে একটি নির্ভরযোগ্য ঠিকানা—ডিজিটাল পরিষেবা, নিত্যপ্রয়োজনীয় সামগ্রী, বই ও অন্যান্য প্রয়োজনীয় পণ্যের সমাহার।</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#services">আমাদের পরিষেবাগুলি দেখুন <span>↘</span></a>
+          <a class="button button-secondary" href="https://wa.me/919091267274" target="_blank" rel="noopener">WhatsApp-এ যোগাযোগ</a>
         </div>
-
-        <div class="hero__visual" aria-hidden="true">
-          <div class="hero__visual-inner" id="heroIllustration">
-            <svg viewBox="0 0 480 480" fill="none" xmlns="http://www.w3.org/2000/svg" focusable="false">
-              <circle cx="240" cy="240" r="188" stroke="#0F62FE" stroke-opacity="0.12" stroke-width="1.5" stroke-dasharray="2 8" />
-              <circle cx="240" cy="240" r="150" stroke="#16A34A" stroke-opacity="0.10" stroke-width="1.5" />
-
-              <g stroke="#0F62FE" stroke-opacity="0.28" stroke-width="1.5" stroke-dasharray="4 6">
-                <line x1="240" y1="240" x2="106" y2="130" class="parallax-layer" data-depth="0.15" />
-                <line x1="240" y1="240" x2="378" y2="112" class="parallax-layer" data-depth="0.15" />
-                <line x1="240" y1="240" x2="88" y2="330" class="parallax-layer" data-depth="0.15" />
-                <line x1="240" y1="240" x2="392" y2="340" class="parallax-layer" data-depth="0.15" />
-              </g>
-
-              <g class="parallax-layer" data-depth="0.45" transform="translate(66,88)">
-                <rect x="0" y="0" width="80" height="88" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" />
-                <rect x="16" y="20" width="48" height="6" rx="3" fill="#0F62FE" fill-opacity="0.7" />
-                <rect x="16" y="34" width="36" height="5" rx="2.5" fill="#CBD5E1" />
-                <rect x="16" y="46" width="42" height="5" rx="2.5" fill="#CBD5E1" />
-                <rect x="16" y="62" width="28" height="14" rx="7" fill="#E3F6EA" />
-                <rect x="20" y="66.5" width="20" height="5" rx="2.5" fill="#16A34A" />
-              </g>
-
-              <g class="parallax-layer" data-depth="0.3" transform="translate(340,72)">
-                <rect x="0" y="0" width="76" height="76" rx="18" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" />
-                <circle cx="38" cy="38" r="20" fill="#FEF3DE" />
-                <path d="M32 38h12M38 32v12" stroke="#C97F08" stroke-width="3" stroke-linecap="round" />
-              </g>
-
-              <g class="parallax-layer" data-depth="0.35" transform="translate(48,300)">
-                <rect x="0" y="0" width="72" height="72" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" />
-                <path d="M36 14l20 8v16c0 15-8.5 24-20 30-11.5-6-20-15-20-30V22l20-8z" fill="#E7EFFE" stroke="#0F62FE" stroke-width="1.5" transform="translate(0,3)" />
-                <path d="M28 39l6 6 12-13" stroke="#0F62FE" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" transform="translate(0,3)" />
-              </g>
-
-              <g class="parallax-layer" data-depth="0.4" transform="translate(354,318)">
-                <rect x="0" y="0" width="78" height="78" rx="18" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" />
-                <path d="M23 46a10 10 0 0 1 2-19.8 13 13 0 0 1 25 3.6A9 9 0 0 1 49 46H23z" fill="#E3F6EA" stroke="#16A34A" stroke-width="1.5" />
-              </g>
-
-              <g class="parallax-layer" data-depth="0.08">
-                <rect x="176" y="140" width="128" height="204" rx="26" fill="#111827" />
-                <rect x="184" y="156" width="112" height="168" rx="4" fill="#F8FAFC" />
-                <rect x="222" y="146" width="36" height="5" rx="2.5" fill="#1F2937" />
-                <rect x="196" y="172" width="88" height="20" rx="6" fill="#0F62FE" />
-                <rect x="204" y="180" width="40" height="5" rx="2.5" fill="#F8FAFC" fill-opacity="0.85" />
-                <rect x="196" y="202" width="40" height="40" rx="10" fill="#E7EFFE" />
-                <rect x="244" y="202" width="40" height="40" rx="10" fill="#E3F6EA" />
-                <rect x="196" y="250" width="40" height="40" rx="10" fill="#FEF3DE" />
-                <rect x="244" y="250" width="40" height="40" rx="10" fill="#E7EFFE" />
-                <rect x="196" y="298" width="88" height="12" rx="6" fill="#E2E8F0" />
-                <rect x="222" y="332" width="36" height="4" rx="2" fill="#334155" />
-              </g>
-
-              <circle class="parallax-layer" data-depth="0.55" cx="152" cy="200" r="4" fill="#0F62FE" />
-              <circle class="parallax-layer" data-depth="0.6" cx="330" cy="180" r="3.5" fill="#16A34A" />
-              <circle class="parallax-layer" data-depth="0.5" cx="322" cy="292" r="3" fill="#F59E0B" />
-            </svg>
-          </div>
+        <div class="trust-row">
+          <div class="trust-icon">✓</div>
+          <p><strong>সঠিক কাজ, দায়িত্বশীল পরিষেবা</strong><br><small>সততা, স্বচ্ছতা ও গ্রাহকসন্তুষ্টিকে গুরুত্ব দিয়ে</small></p>
         </div>
       </div>
-
-      <button type="button" class="hero__scroll-cue" id="scrollCue" aria-label="Scroll to explore">
-        <span class="hero__scroll-cue-icon" aria-hidden="true">
-          <span class="hero__scroll-cue-dot"></span>
-        </span>
-        Scroll
-      </button>
+      <div class="hero-visual" aria-label="সেবাঘর পরিচিতি">
+        <div class="visual-orb orb-one"></div><div class="visual-orb orb-two"></div>
+        <div class="visual-card main-visual-card">
+          <div class="visual-logo-wrap">
+            <img src="assets/logo.png" alt="" class="visual-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid'">
+            <span class="visual-logo-fallback">স</span>
+          </div>
+          <p class="visual-brand-bn">সেবাঘর</p>
+          <p class="visual-brand-en">SEBAGHAR</p>
+          <div class="visual-divider"></div>
+          <p class="visual-tagline">এক ছাদের নিচে<br>আপনার দৈনন্দিন প্রয়োজন</p>
+        </div>
+        <div class="float-chip chip-top"><span>▦</span><div><b>ডিজিটাল পরিষেবা</b><small>সহজ • নির্ভরযোগ্য</small></div></div>
+        <div class="float-chip chip-bottom"><span>♡</span><div><b>আপনার আস্থাই</b><small>আমাদের প্রেরণা</small></div></div>
+        <div class="visual-ring"></div>
+      </div>
     </section>
 
-    <!-- Phase 2+ sections (Services, Statistics, Why Us, Popular Services,
-         Partner CTA, Testimonials, FAQ, Contact) are appended here in
-         later phases. -->
+    <section class="service-section section-pad" id="services">
+      <div class="container">
+        <div class="section-heading">
+          <div><span class="section-kicker">WHAT WE OFFER</span><h2>আমাদের পরিষেবা ও সামগ্রী</h2></div>
+          <p>দৈনন্দিন প্রয়োজনের নানা কাজে সহজ, সুবিধাজনক ও দায়িত্বশীল সহায়তা।</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card"><div class="service-icon blue">▤</div><h3>সরকারি নথিপত্র ও আবেদন</h3><p>সরকারি নথিপত্র, অনলাইন আবেদন এবং প্রয়োজনীয় ফর্ম পূরণে সহায়তা।</p><span class="card-arrow">↗</span></article>
+          <article class="service-card"><div class="service-icon green">₹</div><h3>আধার-ভিত্তিক ব্যাংকিং</h3><p>প্রযোজ্য সুবিধা ও নিয়ম অনুযায়ী আধার-ভিত্তিক ব্যাংকিং পরিষেবায় সহায়তা।</p><span class="card-arrow">↗</span></article>
+          <article class="service-card"><div class="service-icon violet">ϟ</div><h3>বিল পেমেন্ট ও রিচার্জ</h3><p>বিল পেমেন্ট, মোবাইল রিচার্জ এবং অন্যান্য ডিজিটাল পরিষেবা।</p><span class="card-arrow">↗</span></article>
+          <article class="service-card"><div class="service-icon orange">▧</div><h3>টাইপিং ও প্রিন্টিং</h3><p>টাইপিং, প্রিন্টিং, স্ক্যানিং এবং নথিপত্র প্রস্তুতির কাজ।</p><span class="card-arrow">↗</span></article>
+          <article class="service-card"><div class="service-icon cyan">⌁</div><h3>টিকিট বুকিং সহায়তা</h3><p>ট্রেন ও অন্যান্য ভ্রমণের টিকিট বুকিং সংক্রান্ত সহায়তা।</p><span class="card-arrow">↗</span></article>
+          <article class="service-card"><div class="service-icon pink">▣</div><h3>স্টেশনারি ও নিত্যপ্রয়োজনীয় সামগ্রী</h3><p>দৈনন্দিন ব্যবহারের সামগ্রী, স্টেশনারি ও প্রয়োজনীয় পণ্য।</p><span class="card-arrow">↗</span></article>
+          <article class="service-card"><div class="service-icon gold">☾</div><h3>ইসলামিক বই ও ধর্মীয় সামগ্রী</h3><p>ইসলামিক বই এবং বিভিন্ন ধরনের ধর্মীয় সামগ্রী।</p><span class="card-arrow">↗</span></article>
+          <article class="service-card"><div class="service-icon slate">＋</div><h3>অন্যান্য প্রয়োজনীয় পণ্য</h3><p>আপনার দৈনন্দিন কাজে লাগতে পারে এমন আরও নানা প্রয়োজনীয় সামগ্রী।</p><span class="card-arrow">↗</span></article>
+        </div>
+        <p class="service-note">* পরিষেবার প্রাপ্যতা, যোগ্যতা ও প্রযোজ্য নিয়ম অনুযায়ী পরিষেবা দেওয়া হয়।</p>
+      </div>
+    </section>
+
+    <section class="about-section section-pad" id="about">
+      <div class="container about-layout">
+        <div class="about-art">
+          <div class="about-big-icon">✳</div>
+          <div class="about-mini-card"><span>01</span><div><b>সঠিক কাজ</b><small>দায়িত্বের সঙ্গে</small></div></div>
+          <div class="about-mini-card second"><span>02</span><div><b>স্বচ্ছ পরিষেবা</b><small>আস্থার সঙ্গে</small></div></div>
+        </div>
+        <div class="about-copy">
+          <span class="section-kicker">WHY SEBAGHAR</span>
+          <h2>আস্থা, সততা ও গ্রাহকসন্তুষ্টি—আমাদের অঙ্গীকার</h2>
+          <p>সেবাঘর মানুষের দৈনন্দিন প্রয়োজনের পাশে থাকতে চায়। সঠিক কাজ, দায়িত্বশীল পরিষেবা এবং মানুষের আস্থা অর্জনই আমাদের লক্ষ্য। মুনাফার পাশাপাশি সততা, স্বচ্ছতা ও গ্রাহকসন্তুষ্টিকে গুরুত্ব দিয়ে আমরা এগিয়ে যেতে চাই।</p>
+          <ul class="promise-list">
+            <li><span>✓</span> যত্ন ও দায়িত্বের সঙ্গে পরিষেবা</li>
+            <li><span>✓</span> পরিষ্কার ও সহজ যোগাযোগ</li>
+            <li><span>✓</span> গ্রাহকের সময় ও প্রয়োজনের প্রতি সম্মান</li>
+          </ul>
+          <p class="blessing">আপনার আস্থা ও দোয়াই আমাদের প্রেরণা। 🤲</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section section-pad" id="contact">
+      <div class="container contact-panel">
+        <div class="contact-copy">
+          <span class="section-kicker">GET IN TOUCH</span>
+          <h2>আপনার প্রয়োজনে<br>আমরা পাশে আছি।</h2>
+          <p>পরিষেবা বা পণ্য সম্পর্কে জানতে সরাসরি যোগাযোগ করুন।</p>
+          <div class="contact-details">
+            <div class="contact-item"><span class="contact-symbol">⌖</span><div><small>আমাদের ঠিকানা</small><strong>আলিনগর উত্তরপাড়া</strong></div></div>
+            <a class="contact-item" href="tel:9091267274"><span class="contact-symbol">☎</span><div><small>ফোন করুন</small><strong>9091267274</strong></div></a>
+            <a class="contact-item" href="mailto:sebaghar@ansariindia.com"><span class="contact-symbol">✉</span><div><small>ইমেল</small><strong>sebaghar@ansariindia.com</strong></div></a>
+            <a class="contact-item" href="https://sebaghar.ansariindia.com" target="_blank" rel="noopener"><span class="contact-symbol">◎</span><div><small>ওয়েবসাইট</small><strong>sebaghar.ansariindia.com</strong></div></a>
+          </div>
+        </div>
+        <div class="contact-side">
+          <img class="brand-logo" src="assets/logo.png" alt="সেবাঘর SebaGhar লোগো" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid'">
+          <p class="side-title">সেবাঘর | SebaGhar</p>
+          <p class="side-subtitle">A unit of ANSARI INDIA</p>
+          <div class="side-line"></div>
+          <p>আপনার প্রয়োজনে,<br><strong>আপনার পাশে।</strong></p>
+          <a class="button button-light" href="https://wa.me/919091267274" target="_blank" rel="noopener">WhatsApp-এ মেসেজ করুন ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <!--
+      ভবিষ্যতে Google Business Profile verification সম্পূর্ণ হলে নিচের অংশের comment সরিয়ে
+      Google Maps-এর embed iframe যুক্ত করুন। তার আগে এই অংশটি ওয়েবপেজে দেখা যাবে না।
+
+      <section class="map-section container section-pad" id="location">
+        <h2>আমাদের অবস্থান</h2>
+        <div class="map-frame">
+          <iframe src="এখানে-আপনার-Google-Maps-embed-URL" width="100%" height="380"
+            style="border:0" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" title="সেবাঘর Google Maps অবস্থান"></iframe>
+        </div>
+      </section>
+    -->
   </main>
 
-  <!-- ============================== COMING SOON MODAL ============================== -->
-  <div class="modal" id="comingSoonModal">
-    <div class="modal__backdrop" data-modal-close></div>
-    <div
-      class="modal__panel"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="comingSoonTitle"
-      aria-describedby="comingSoonMessage"
-    >
-      <button type="button" class="modal__close" data-modal-close aria-label="Close dialog">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-      </button>
-      <div class="modal__icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 7v5l3.2 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-          <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/>
-        </svg>
-      </div>
-      <h2 class="modal__title" id="comingSoonTitle">Coming Soon</h2>
-      <p class="modal__message" id="comingSoonMessage">
-        We're working hard to bring this service to you. Stay connected with SebaGhar for future updates.
-      </p>
-      <button type="button" class="btn btn-primary btn-block" data-modal-close>OK</button>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="footer-brand" href="#home">সেবাঘর <span>| SebaGhar</span></a>
+      <p>© <span id="year"></span> SebaGhar. সর্বস্বত্ব সংরক্ষিত।</p>
+      <a href="#home" class="back-top">উপরে যান ↑</a>
     </div>
-  </div>
-
-  <script type="module" src="js/main.js"></script>
+    <div class="container legal-note">SebaGhar (সেবাঘর) · A unit of ANSARI INDIA</div>
+  </footer>
 </body>
 </html>
