@@ -142,20 +142,15 @@
         </div>
       </div>
     </section>
-
-    <!--
-      ভবিষ্যতে Google Business Profile verification সম্পূর্ণ হলে নিচের অংশের comment সরিয়ে
-      Google Maps-এর embed iframe হবে।
-
+<!--
       <section class="map-section container section-pad" id="location">
         <h2>আমাদের অবস্থান</h2>
         <div class="map-frame">
-          <iframe src="Google-Maps-embed-URL" width="100%" height="380"
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d455.21336096087254!2d88.62573215486165!3d24.11180120605742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f959028ba529f5%3A0xe3cfca3903ed4ab7!2sAnsari%20Digital%20World!5e0!3m2!1sen!2sin!4v1793155260043!5m2!1sen!2sin" width="100%" height="380"
             style="border:0" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade" title="সেবাঘর Google Maps অবস্থান"></iframe>
         </div>
-      </section>
-    -->
+      </section> -->
   </main>
 
   <footer class="site-footer">
@@ -166,5 +161,24 @@
       <a href="#page-top" class="back-top">উপরে যান ↑</a>
     </div>
   </footer>
+
+<link rel="stylesheet" href="launch-popup.css">
+<div class="sg-launch-overlay" id="sgLaunchOverlay" aria-hidden="true">
+  <section class="sg-launch-modal" role="dialog" aria-modal="true" aria-labelledby="sgLaunchTitle">
+    <button class="sg-launch-close" type="button" id="sgLaunchClose" aria-label="Close announcement">&times;</button>
+    <div class="sg-launch-brand">সেবাঘর | SebaGhar</div>
+        <p class="sg-launch-subtitle">আপনার প্রয়োজনে, আপনার পাশে।</p>
+        <p class="sg-launch-kicker">🌿 নতুন পরিচয়ে, নতুন উদ্যমে</p>
+        <h2 id="sgLaunchTitle">শুভ উদ্বোধন</h2>
+    <div class="sg-launch-date">
+      <strong>৪ ডিসেম্বর ২০২৬</strong>
+      <span>বিকেল ৪টা</span>
+    </div>
+    <p class="sg-launch-message">ডিজিটাল পরিষেবা, নিত্যপ্রয়োজনীয় সামগ্রী, বই ও অন্যান্য প্রয়োজনীয় পণ্যের জন্য আপনাকে স্বাগতম।</p>
+    <p class="sg-launch-footer">আপনার আস্থা ও দোয়াই আমাদের প্রেরণা।</p>
+  </section>
+</div>
+<script src="launch-popup.js" defer></script>
+
 </body>
 </html>

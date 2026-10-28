@@ -1,0 +1,243 @@
+/* SebaGhar launch popup — styled for the SebaGhar blue/white/green visual identity.
+   All selectors are namespaced to avoid affecting the main website. */
+
+.sg-launch-overlay,
+.sg-launch-overlay * {
+  box-sizing: border-box;
+}
+
+.sg-launch-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+  overflow-y: auto;
+  background: rgba(16, 27, 43, 0.58);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  font-family: "Hind Siliguri", sans-serif;
+}
+
+.sg-launch-overlay.sg-launch-visible {
+  display: flex;
+  animation: sg-launch-fade-in 220ms ease-out both;
+}
+
+.sg-launch-modal {
+  position: relative;
+  width: min(100%, 540px);
+  max-height: calc(100dvh - 44px);
+  overflow-y: auto;
+  padding: 42px 38px 34px;
+  border: 1px solid rgba(255, 255, 255, 0.92);
+  border-radius: 26px;
+  background:
+    radial-gradient(ellipse at 95% 0%, rgba(8, 124, 240, 0.10), transparent 38%),
+    linear-gradient(180deg, #f8fbff 0%, #ffffff 65%);
+  color: #101b2b;
+  text-align: center;
+  box-shadow: 0 28px 90px rgba(7, 38, 78, 0.28);
+  animation: sg-launch-rise-in 280ms ease-out both;
+}
+
+.sg-launch-modal::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  border-radius: 26px 26px 0 0;
+  background: linear-gradient(90deg, #087cf0, #22a66a);
+}
+
+.sg-launch-close {
+  position: absolute;
+  top: 13px;
+  right: 13px;
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border: 1px solid #e2eaf3;
+  border-radius: 11px;
+  background: #fff;
+  color: #65748a;
+  font-family: Arial, sans-serif;
+  font-size: 27px;
+  line-height: 1;
+  cursor: pointer;
+  transition: color 180ms ease, background 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+
+.sg-launch-close:hover {
+  color: #075bc0;
+  background: #eaf4ff;
+  border-color: #cfe4ff;
+  transform: rotate(90deg);
+}
+
+.sg-launch-close:focus-visible {
+  outline: 3px solid rgba(8, 124, 240, 0.35);
+  outline-offset: 3px;
+}
+
+.sg-launch-brand {
+  margin: 0;
+  padding: 0 28px;
+  color: #101b2b;
+  font-size: clamp(24px, 4vw, 29px);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.sg-launch-subtitle {
+  margin: 3px 0 14px;
+  color: #66758a;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.sg-launch-kicker {
+  display: inline-block;
+  margin: 0 0 10px;
+  padding: 7px 14px;
+  border: 1px solid #d8eaff;
+  border-radius: 99px;
+  background: #f3f9ff;
+  color: #075bc0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.sg-launch-modal h2 {
+  margin: 4px 0 20px;
+  color: #101b2b;
+  font-size: clamp(30px, 5vw, 40px);
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
+
+.sg-launch-date {
+  display: grid;
+  gap: 3px;
+  margin: 0 0 18px;
+  padding: 17px 18px 16px;
+  border: 1px solid #dcecff;
+  border-radius: 17px;
+  background: linear-gradient(110deg, #eaf4ff 0%, #f5f9ff 58%, #eaf8f1 100%);
+}
+
+.sg-launch-date strong {
+  color: #101b2b;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.sg-launch-date span {
+  color: #66758a;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.sg-launch-message {
+  max-width: 420px;
+  margin: 0 auto;
+  color: #5e6d81;
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.sg-launch-footer {
+  margin: 16px 0 0;
+  color: #087cf0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+@keyframes sg-launch-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes sg-launch-rise-in {
+  from { opacity: 0; transform: translateY(12px) scale(0.985); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@media (max-width: 600px) {
+  .sg-launch-overlay {
+    padding: 15px;
+  }
+
+  .sg-launch-modal {
+    width: min(100%, 460px);
+    max-height: calc(100dvh - 30px);
+    padding: 38px 22px 26px;
+    border-radius: 22px;
+  }
+
+  .sg-launch-modal::before {
+    border-radius: 22px 22px 0 0;
+  }
+
+  .sg-launch-close {
+    top: 10px;
+    right: 10px;
+    width: 36px;
+    height: 36px;
+  }
+
+  .sg-launch-brand {
+    padding: 0 22px;
+  }
+
+  .sg-launch-subtitle {
+    margin-bottom: 12px;
+    font-size: 14px;
+  }
+
+  .sg-launch-kicker {
+    font-size: 13px;
+  }
+
+  .sg-launch-modal h2 {
+    margin-bottom: 17px;
+  }
+
+  .sg-launch-date {
+    padding: 15px 12px;
+  }
+
+  .sg-launch-date strong {
+    font-size: 23px;
+  }
+
+  .sg-launch-message {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .sg-launch-footer {
+    font-size: 13px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sg-launch-overlay.sg-launch-visible,
+  .sg-launch-modal {
+    animation: none;
+  }
+
+  .sg-launch-close {
+    transition: none;
+  }
+}
