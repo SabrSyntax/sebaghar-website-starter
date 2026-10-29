@@ -20,7 +20,7 @@ The website introduces SebaGhar's digital services, everyday essentials, station
 - **WhatsApp Channel Updates** — A prominent notice encourages visitors to follow the channel for service updates.
 - **Mobile Navigation** — An interactive navigation menu for smaller screens.
 - **Contact Information** — Quick access to the business phone number, email, website, and location information.
-- **Future Map Integration** — A reserved section for adding an embedded Google Map when appropriate.
+- **Map Integration** — Business location on Google Maps.
 - **Lightweight Architecture** — Built with standard HTML, CSS, and vanilla JavaScript without a frontend framework.
 
 ## 🛠️ Technology Stack
@@ -85,7 +85,7 @@ Ensure that all required files and the `assets/` directory are committed to the 
 **Website:** https://sebaghar.ansariindia.com  
 **Email:** sebaghar@ansariindia.com  
 **Phone:** +91 9091267274  
-**Location:** Alinagar Uttarpara, West Bengal, India
+**Location:** Alinagar, Bilaspur, Domkal, Murshidabad, West Bengal -742303, India
 
 ## 📄 License
 
